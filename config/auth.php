@@ -1,6 +1,7 @@
 <?php
 
-return [
+return
+    [
 
     /*
     |--------------------------------------------------------------------------
@@ -13,10 +14,13 @@ return [
     |
     */
 
-    'defaults' => [
+    'defaults' =>
+        [
+
         'guard' => 'web',
-        'passwords' => 'users',
-    ],
+        'passwords' => 'users'
+
+        ],
 
     /*
     |--------------------------------------------------------------------------
@@ -35,17 +39,25 @@ return [
     |
     */
 
-    'guards' => [
-        'web' => [
-            'driver' => 'session',
-            'provider' => 'users',
-        ],
+    'guards' =>
+        [
 
-        'api' => [
+        'web' =>
+            [
+
+            'driver' => 'session',
+            'provider' => 'users'
+
+            ],
+        'api' =>
+            [
+
             'driver' => 'token',
-            'provider' => 'users',
+            'provider' => 'users'
+
+            ]
+
         ],
-    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -64,17 +76,23 @@ return [
     |
     */
 
-    'providers' => [
-        'users' => [
+    'providers' =>
+        [
+
+        'users' =>
+            [
+
             'driver' => 'eloquent',
-            'model' => App\User::class,
-        ],
+            'model' => CV\User::class
+
+            ],
 
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
-        // ],
-    ],
+        // ]
+
+        ],
 
     /*
     |--------------------------------------------------------------------------
@@ -91,12 +109,18 @@ return [
     |
     */
 
-    'passwords' => [
-        'users' => [
+    'passwords' =>
+        [
+
+        'users' =>
+            [
+
             'provider' => 'users',
             'table' => 'password_resets',
-            'expire' => 60,
-        ],
-    ],
+            'expire' => 60
 
-];
+            ]
+
+        ]
+
+    ];

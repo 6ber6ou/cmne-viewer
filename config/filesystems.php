@@ -1,6 +1,7 @@
 <?php
 
-return [
+return
+    [
 
     /*
     |--------------------------------------------------------------------------
@@ -41,27 +42,34 @@ return [
     |
     */
 
-    'disks' => [
+    'disks' =>
+        [
 
-        'local' => [
+        'local' =>
+            [
+
             'driver' => 'local',
-            'root' => storage_path('app'),
-        ],
+            'root' => storage_path( 'app' )
+            ],
+        'public' =>
+            [
 
-        'public' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
-            'visibility' => 'public',
-        ],
+            'root' => storage_path( 'app/public' ),
+            'visibility' => 'public'
 
-        's3' => [
+            ],
+        's3' =>
+            [
+
             'driver' => 's3',
             'key' => 'your-key',
             'secret' => 'your-secret',
             'region' => 'your-region',
-            'bucket' => 'your-bucket',
-        ],
+            'bucket' => 'your-bucket'
 
-    ],
+            ]
 
-];
+        ]
+
+    ];
